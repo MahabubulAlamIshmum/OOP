@@ -15,9 +15,20 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
+**Basic Structure**
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
+```
+---
+
 **Java Class**
 
-```sql
+```java
 class Test {
        // class body
        member variables
