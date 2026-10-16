@@ -5,77 +5,1118 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ## Table of Contents
 
-1. [Class and Object](#1-class-and-object)
-   - [Class](#class)
-   - [Object](#object)
-2. [Constructor](#2-constructor)
-3. [Method Overloading](#3-method-overloading)
-4. [Inheritance](#4-inheritance)
-5. [Polymorphism](#5-polymorphism)
-   - [Compile Time Polymorphism (Overloading)](#compile-time-polymorphism-overloading)
-   - [Run Time Polymorphism (Overriding)](#run-time-polymorphism-overriding)
-6. [Abstraction](#6-abstraction)
-7. [Interface](#7-interface)
-8. [Encapsulation](#8-encapsulation)
-9. [Access Modifiers](#9-access-modifiers)
-   - [Private](#private)
-   - [Public](#public)
-   - [Default](#default)
-   - [Protected](#protected)
-10. [Exception Handling](#10-exception-handling)
-   - [try](#try)
-   - [catch](#catch)
-   - [finally](#finally)
-   - [throw](#throw)
-   - [throws](#throws)
-11. [Package](#11-package)
-   - [Built-in Package](#built-in-package)
-   - [User-defined Package](#user-defined-package)
-12. [Static Keyword](#12-static-keyword)
-   - [Static Variable](#static-variable)
-   - [Static Method](#static-method)
-   - [Static Block](#static-block)
-13. [Inner Class](#13-inner-class)
-14. [ArrayList](#14-arraylist)
-15. [File](#15-file)
-16. [JavaFX / Swing (GUI)](#16-javafx--swing-gui)
-17. [Thread](#17-thread)
+1. [Java Structure](#1-java-structure)
+2. [Loop](#2-loop)
+3. [Array](#3-array)
+4. [Method](#4-method)
+5. [Class and Object](#5-class-and-object)
+6. [Constructor](#6-constructor)
+7. [Method Overloading](#7-method-overloading)
+8. [Method Overriding](#8-method-overriding)
+9. [Inheritance](#9-inheritance)
+10. [Polymorphism](#10-polymorphism)
+11. [Abstraction](#11-abstraction)
+12. [Interface](#12-interface)
+13. [Encapsulation](#13-encapsulation)
+14. [Access Modifiers](#14-access-modifiers)
+15. [Exception Handling](#15-exception-handling)
+16. [Package](#16-package)
+17. [Static](#17-static)
+18. [Inner Class](#18-inner-class)
+19. [ArrayList](#19-arraylist)
+20. [File Handling](#20-file-handling)
+21. [GUI](#21-gui)
+22. [Thread](#22-thread)
 
 ---
 
-## 1. Class and Object
+# 1. Java Structure
 
-### Class
+### Structure
 
-**Structure:**
-
-```java
-class ClassName {
-    // fields
-    // methods
-}
-```
-
-
----
-
-**Basic Structure**
-
-```java
-public class Main {
-    public static void main(String[] args) {
-
+    public class ClassName {
+        public static void main(String[] args) {
+            // statements
+        }
     }
-}
-```
+
+### Example
+
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello World");
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
 ---
 
-**Java Class**
+# 2. Loop
 
-```java
-class Test {
-       // class body
-       member variables
-       methods
-}
-```
+## For Loop
+
+### Structure
+
+    for(initialization; condition; update) {
+        // statements
+    }
+
+### Example
+
+    for(int i = 1; i <= 5; i++) {
+        System.out.println(i);
+    }
+
+## While Loop
+
+### Structure
+
+    while(condition) {
+        // statements
+    }
+
+### Example
+
+    int i = 1;
+
+    while(i <= 5) {
+        System.out.println(i);
+        i++;
+    }
+
+## Do-While Loop
+
+### Structure
+
+    do {
+        // statements
+    } while(condition);
+
+### Example
+
+    int i = 1;
+
+    do {
+        System.out.println(i);
+        i++;
+    } while(i <= 5);
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 3. Array
+
+### Structure
+
+    dataType[] arrayName = new dataType[size];
+
+### Example
+
+    int[] numbers = new int[5];
+
+    numbers[0] = 10;
+    numbers[1] = 20;
+    numbers[2] = 30;
+
+    System.out.println(numbers[0]);
+
+## Array Initialization
+
+### Structure
+
+    dataType[] arrayName = {value1, value2, value3};
+
+### Example
+
+    int[] numbers = {10, 20, 30, 40, 50};
+
+    for(int i = 0; i < numbers.length; i++) {
+        System.out.println(numbers[i]);
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 4. Method
+
+### Structure
+
+    returnType methodName(parameters) {
+        // statements
+        return value;
+    }
+
+### Example
+
+    class Calculator {
+
+        int add(int a, int b) {
+            return a + b;
+        }
+
+        public static void main(String[] args) {
+            Calculator c = new Calculator();
+            System.out.println(c.add(10, 20));
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 5. Class and Object
+
+## Class
+
+### Structure
+
+    class ClassName {
+        dataType variableName;
+
+        returnType methodName() {
+            // statements
+        }
+    }
+
+### Example
+
+    class Student {
+
+        String name;
+        int age;
+
+        void display() {
+            System.out.println(name);
+            System.out.println(age);
+        }
+    }
+
+## Object
+
+### Structure
+
+    ClassName objectName = new ClassName();
+
+### Example
+
+    Student s1 = new Student();
+
+    s1.name = "Rahim";
+    s1.age = 20;
+
+    s1.display();
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 6. Constructor
+
+### Structure
+
+    class ClassName {
+
+        ClassName() {
+            // constructor body
+        }
+    }
+
+### Example
+
+    class Student {
+
+        String name;
+
+        Student() {
+            name = "Rahim";
+        }
+
+        public static void main(String[] args) {
+            Student s = new Student();
+            System.out.println(s.name);
+        }
+    }
+
+## Parameterized Constructor
+
+### Structure
+
+    ClassName(dataType parameter) {
+        // statements
+    }
+
+### Example
+
+    class Student {
+
+        String name;
+        int age;
+
+        Student(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 7. Method Overloading
+
+### Structure
+
+    returnType methodName(dataType parameter) {
+        // statements
+    }
+
+    returnType methodName(dataType parameter1, dataType parameter2) {
+        // statements
+    }
+
+### Example
+
+    class Calculator {
+
+        int add(int a, int b) {
+            return a + b;
+        }
+
+        int add(int a, int b, int c) {
+            return a + b + c;
+        }
+
+        public static void main(String[] args) {
+
+            Calculator c = new Calculator();
+
+            System.out.println(c.add(10, 20));
+            System.out.println(c.add(10, 20, 30));
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 8. Method Overriding
+
+### Structure
+
+    class Parent {
+
+        void methodName() {
+            // parent method
+        }
+    }
+
+    class Child extends Parent {
+
+        @Override
+        void methodName() {
+            // child method
+        }
+    }
+
+### Example
+
+    class Animal {
+
+        void sound() {
+            System.out.println("Animal makes sound");
+        }
+    }
+
+    class Dog extends Animal {
+
+        @Override
+        void sound() {
+            System.out.println("Dog barks");
+        }
+
+        public static void main(String[] args) {
+
+            Dog d = new Dog();
+
+            d.sound();
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 9. Inheritance
+
+### Structure
+
+    class Parent {
+        // parent members
+    }
+
+    class Child extends Parent {
+        // child members
+    }
+
+### Example
+
+    class Animal {
+
+        void eat() {
+            System.out.println("Animal eats");
+        }
+    }
+
+    class Dog extends Animal {
+
+        void bark() {
+            System.out.println("Dog barks");
+        }
+
+        public static void main(String[] args) {
+
+            Dog d = new Dog();
+
+            d.eat();
+            d.bark();
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 10. Polymorphism
+
+### Structure
+
+    Parent objectName = new Child();
+
+    objectName.methodName();
+
+### Example
+
+    class Animal {
+
+        void sound() {
+            System.out.println("Animal sound");
+        }
+    }
+
+    class Dog extends Animal {
+
+        @Override
+        void sound() {
+            System.out.println("Dog barks");
+        }
+    }
+
+    class Main {
+
+        public static void main(String[] args) {
+
+            Animal a = new Dog();
+
+            a.sound();
+        }
+    }
+
+## Compile Time Polymorphism
+
+### Structure
+
+    void method(int a) {
+        // statements
+    }
+
+    void method(String a) {
+        // statements
+    }
+
+### Example
+
+    class Display {
+
+        void show(int x) {
+            System.out.println(x);
+        }
+
+        void show(String x) {
+            System.out.println(x);
+        }
+    }
+
+## Run Time Polymorphism
+
+### Structure
+
+    Parent reference = new Child();
+
+    reference.method();
+
+### Example
+
+    class Animal {
+
+        void sound() {
+            System.out.println("Animal sound");
+        }
+    }
+
+    class Dog extends Animal {
+
+        void sound() {
+            System.out.println("Dog barks");
+        }
+    }
+
+    class Main {
+
+        public static void main(String[] args) {
+
+            Animal a = new Dog();
+
+            a.sound();
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 11. Abstraction
+
+### Structure
+
+    abstract class ClassName {
+
+        abstract void methodName();
+    }
+
+### Example
+
+    abstract class Shape {
+
+        abstract void draw();
+    }
+
+    class Circle extends Shape {
+
+        void draw() {
+            System.out.println("Drawing Circle");
+        }
+
+        public static void main(String[] args) {
+
+            Circle c = new Circle();
+
+            c.draw();
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 12. Interface
+
+### Structure
+
+    interface InterfaceName {
+
+        void methodName();
+    }
+
+    class ClassName implements InterfaceName {
+
+        public void methodName() {
+            // statements
+        }
+    }
+
+### Example
+
+    interface Animal {
+
+        void sound();
+    }
+
+    class Dog implements Animal {
+
+        public void sound() {
+            System.out.println("Dog barks");
+        }
+
+        public static void main(String[] args) {
+
+            Dog d = new Dog();
+
+            d.sound();
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 13. Encapsulation
+
+### Structure
+
+    class ClassName {
+
+        private dataType variableName;
+
+        public void setVariable(dataType value) {
+            variableName = value;
+        }
+
+        public dataType getVariable() {
+            return variableName;
+        }
+    }
+
+### Example
+
+    class Student {
+
+        private String name;
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public static void main(String[] args) {
+
+            Student s = new Student();
+
+            s.setName("Rahim");
+
+            System.out.println(s.getName());
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 14. Access Modifiers
+
+## Private
+
+### Structure
+
+    private dataType variableName;
+
+### Example
+
+    class Student {
+        private int age = 20;
+    }
+
+## Public
+
+### Structure
+
+    public dataType variableName;
+
+### Example
+
+    class Student {
+        public String name = "Rahim";
+    }
+
+## Default
+
+### Structure
+
+    dataType variableName;
+
+### Example
+
+    class Student {
+        int age = 20;
+    }
+
+## Protected
+
+### Structure
+
+    protected dataType variableName;
+
+### Example
+
+    class Parent {
+
+        protected int number = 10;
+    }
+
+    class Child extends Parent {
+
+        void display() {
+            System.out.println(number);
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 15. Exception Handling
+
+## try-catch
+
+### Structure
+
+    try {
+        // risky code
+    }
+    catch(ExceptionType e) {
+        // handling code
+    }
+
+### Example
+
+    try {
+        int x = 10 / 0;
+    }
+    catch(ArithmeticException e) {
+        System.out.println("Cannot divide by zero");
+    }
+
+## finally
+
+### Structure
+
+    try {
+        // code
+    }
+    catch(Exception e) {
+        // handling
+    }
+    finally {
+        // always executes
+    }
+
+### Example
+
+    try {
+        int x = 10 / 2;
+    }
+    catch(Exception e) {
+        System.out.println(e);
+    }
+    finally {
+        System.out.println("Done");
+    }
+
+## throw
+
+### Structure
+
+    throw new ExceptionType("message");
+
+### Example
+
+    int age = 15;
+
+    if(age < 18) {
+        throw new ArithmeticException("Not eligible");
+    }
+
+## throws
+
+### Structure
+
+    returnType methodName() throws ExceptionType {
+        // code
+    }
+
+### Example
+
+    import java.io.IOException;
+
+    class Test {
+
+        static void readFile() throws IOException {
+            System.out.println("Reading file");
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 16. Package
+
+## Import Package
+
+### Structure
+
+    import packageName.ClassName;
+
+### Example
+
+    import java.util.Scanner;
+
+    class Main {
+
+        public static void main(String[] args) {
+
+            Scanner sc = new Scanner(System.in);
+
+            int n = sc.nextInt();
+
+            System.out.println(n);
+        }
+    }
+
+## Create Package
+
+### Structure
+
+    package packageName;
+
+### Example
+
+    package mypack;
+
+    public class Message {
+
+        public void show() {
+            System.out.println("Hello");
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 17. Static
+
+## Static Variable
+
+### Structure
+
+    static dataType variableName;
+
+### Example
+
+    class Student {
+
+        static String university = "University";
+    }
+
+## Static Method
+
+### Structure
+
+    static returnType methodName() {
+        // statements
+    }
+
+### Example
+
+    class Test {
+
+        static void display() {
+            System.out.println("Hello");
+        }
+
+        public static void main(String[] args) {
+            display();
+        }
+    }
+
+## Static Block
+
+### Structure
+
+    static {
+        // statements
+    }
+
+### Example
+
+    class Test {
+
+        static {
+            System.out.println("Static Block");
+        }
+
+        public static void main(String[] args) {
+            System.out.println("Main Method");
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 18. Inner Class
+
+### Structure
+
+    class Outer {
+
+        class Inner {
+            // statements
+        }
+    }
+
+### Example
+
+    class Outer {
+
+        int x = 10;
+
+        class Inner {
+
+            void show() {
+                System.out.println(x);
+            }
+        }
+
+        public static void main(String[] args) {
+
+            Outer o = new Outer();
+
+            Outer.Inner i = o.new Inner();
+
+            i.show();
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 19. ArrayList
+
+### Structure
+
+    import java.util.ArrayList;
+
+    ArrayList<DataType> listName =
+        new ArrayList<DataType>();
+
+### Example
+
+    import java.util.ArrayList;
+
+    class Main {
+
+        public static void main(String[] args) {
+
+            ArrayList<Integer> numbers =
+                new ArrayList<Integer>();
+
+            numbers.add(10);
+            numbers.add(20);
+            numbers.add(30);
+
+            System.out.println(numbers);
+        }
+    }
+
+## ArrayList Methods
+
+### Structure
+
+    listName.add(value);
+
+    listName.get(index);
+
+    listName.set(index, value);
+
+    listName.remove(index);
+
+    listName.size();
+
+### Example
+
+    ArrayList<String> names = new ArrayList<>();
+
+    names.add("Rahim");
+    names.add("Karim");
+
+    System.out.println(names.get(0));
+
+    names.set(0, "Hasan");
+
+    names.remove(1);
+
+    System.out.println(names.size());
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 20. File Handling
+
+### Structure
+
+    import java.io.File;
+
+    File fileName = new File("fileName");
+
+### Example
+
+    import java.io.File;
+    import java.io.IOException;
+
+    class Main {
+
+        public static void main(String[] args) {
+
+            try {
+
+                File file = new File("demo.txt");
+
+                if(file.createNewFile()) {
+                    System.out.println("File created");
+                }
+
+            }
+            catch(IOException e) {
+                System.out.println("Error occurred");
+            }
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 21. GUI
+
+## JFrame
+
+### Structure
+
+    import javax.swing.*;
+
+    JFrame frame = new JFrame();
+
+    frame.setSize(width, height);
+
+    frame.setVisible(true);
+
+### Example
+
+    import javax.swing.*;
+
+    class Main {
+
+        public static void main(String[] args) {
+
+            JFrame frame = new JFrame("My GUI");
+
+            frame.setSize(400, 300);
+
+            frame.setVisible(true);
+
+            frame.setDefaultCloseOperation(
+                JFrame.EXIT_ON_CLOSE
+            );
+        }
+    }
+
+## JButton
+
+### Structure
+
+    JButton button = new JButton("Button");
+
+    frame.add(button);
+
+### Example
+
+    import javax.swing.*;
+
+    class Main {
+
+        public static void main(String[] args) {
+
+            JFrame frame = new JFrame("GUI");
+
+            JButton button = new JButton("Click");
+
+            frame.add(button);
+
+            frame.setSize(300, 200);
+
+            frame.setVisible(true);
+        }
+    }
+
+[⬆ Back to Topics](#topics)
+
+---
+
+# 22. Thread
+
+## Extending Thread
+
+### Structure
+
+    class ClassName extends Thread {
+
+        public void run() {
+            // task
+        }
+    }
+
+### Example
+
+    class MyThread extends Thread {
+
+        public void run() {
+            System.out.println("Thread is running");
+        }
+
+        public static void main(String[] args) {
+
+            MyThread t1 = new MyThread();
+
+            t1.start();
+        }
+    }
+
+## Runnable
+
+### Structure
+
+    class ClassName implements Runnable {
+
+        public void run() {
+            // task
+        }
+    }
+
+### Example
+
+    class MyTask implements Runnable {
+
+        public void run() {
+            System.out.println("Thread is running");
+        }
+
+        public static void main(String[] args) {
+
+            MyTask task = new MyTask();
+
+            Thread t = new Thread(task);
+
+            t.start();
+        }
+    }
+
+[⬆ Back to Topics](#topics)
