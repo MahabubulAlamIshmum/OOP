@@ -5,32 +5,37 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ## Table of Contents
 
-1. [Java Structure](#1-java-structure)
-2. [Loop](#2-loop)
-3. [Array](#3-array)
-4. [Method](#4-method)
-5. [Class and Object](#5-class-and-object)
-6. [Constructor](#6-constructor)
-7. [Method Overloading](#7-method-overloading)
-8. [Method Overriding](#8-method-overriding)
-9. [Inheritance](#9-inheritance)
-10. [Polymorphism](#10-polymorphism)
-11. [Abstraction](#11-abstraction)
-12. [Interface](#12-interface)
-13. [Encapsulation](#13-encapsulation)
-14. [Access Modifiers](#14-access-modifiers)
-15. [Exception Handling](#15-exception-handling)
-16. [Package](#16-package)
-17. [Static](#17-static)
-18. [Inner Class](#18-inner-class)
-19. [ArrayList](#19-arraylist)
-20. [File Handling](#20-file-handling)
-21. [GUI](#21-gui)
-22. [Thread](#22-thread)
+1. [Basic Concept](#1-basic-concept)
+   - [Java Structure](#java-structure)
+   - [Loop](#loop)
+   - [Array](#array)
+   - [Method](#method)
+
+2. [OOP](#2-oop)
+   - [Class and Object](#class-and-object)
+   - [Constructor](#constructor)
+   - [Method Overloading](#method-overloading)
+   - [Method Overriding](#method-overriding)
+   - [Inheritance](#inheritance)
+   - [Polymorphism](#polymorphism)
+   - [Abstraction](#abstraction)
+   - [Interface](#interface)
+   - [Encapsulation](#encapsulation)
+   - [Access Modifiers](#access-modifiers)
+   - [Exception Handling](#exception-handling)
+   - [Package](#package)
+   - [Static](#static)
+   - [Inner Class](#inner-class)
+   - [ArrayList](#arraylist)
+   - [File Handling](#file-handling)
+   - [GUI](#gui)
+   - [Thread](#thread)
 
 ---
 
-# 1. Java Structure
+# 1. Basic Concept
+
+## Java Structure
 
 ### Structure
 
@@ -52,31 +57,27 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 2. Loop
+## Loop
 
-## For Loop
-
-### Structure
+### For Loop Structure
 
     for(initialization; condition; update) {
         // statements
     }
 
-### Example
+### For Loop Example
 
     for(int i = 1; i <= 5; i++) {
         System.out.println(i);
     }
 
-## While Loop
-
-### Structure
+### While Loop Structure
 
     while(condition) {
         // statements
     }
 
-### Example
+### While Loop Example
 
     int i = 1;
 
@@ -85,15 +86,13 @@ Object-Oriented Programming (OOP) in Java language with examples
         i++;
     }
 
-## Do-While Loop
-
-### Structure
+### Do-While Loop Structure
 
     do {
         // statements
     } while(condition);
 
-### Example
+### Do-While Loop Example
 
     int i = 1;
 
@@ -106,7 +105,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 3. Array
+## Array
 
 ### Structure
 
@@ -122,9 +121,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
     System.out.println(numbers[0]);
 
-## Array Initialization
-
-### Structure
+### Array Initialization Structure
 
     dataType[] arrayName = {value1, value2, value3};
 
@@ -140,7 +137,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 4. Method
+## Method
 
 ### Structure
 
@@ -167,11 +164,11 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 5. Class and Object
+# 2. OOP
 
-## Class
+## Class and Object
 
-### Structure
+### Class Structure
 
     class ClassName {
         dataType variableName;
@@ -181,7 +178,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         }
     }
 
-### Example
+### Class Example
 
     class Student {
 
@@ -194,13 +191,11 @@ Object-Oriented Programming (OOP) in Java language with examples
         }
     }
 
-## Object
-
-### Structure
+### Object Structure
 
     ClassName objectName = new ClassName();
 
-### Example
+### Object Example
 
     Student s1 = new Student();
 
@@ -213,7 +208,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 6. Constructor
+## Constructor
 
 ### Structure
 
@@ -240,9 +235,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         }
     }
 
-## Parameterized Constructor
-
-### Structure
+### Parameterized Constructor Structure
 
     ClassName(dataType parameter) {
         // statements
@@ -265,7 +258,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 7. Method Overloading
+## Method Overloading
 
 ### Structure
 
@@ -302,7 +295,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 8. Method Overriding
+## Method Overriding
 
 ### Structure
 
@@ -349,7 +342,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 9. Inheritance
+## Inheritance
 
 ### Structure
 
@@ -389,7 +382,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 10. Polymorphism
+## Polymorphism
 
 ### Structure
 
@@ -424,70 +417,11 @@ Object-Oriented Programming (OOP) in Java language with examples
         }
     }
 
-## Compile Time Polymorphism
-
-### Structure
-
-    void method(int a) {
-        // statements
-    }
-
-    void method(String a) {
-        // statements
-    }
-
-### Example
-
-    class Display {
-
-        void show(int x) {
-            System.out.println(x);
-        }
-
-        void show(String x) {
-            System.out.println(x);
-        }
-    }
-
-## Run Time Polymorphism
-
-### Structure
-
-    Parent reference = new Child();
-
-    reference.method();
-
-### Example
-
-    class Animal {
-
-        void sound() {
-            System.out.println("Animal sound");
-        }
-    }
-
-    class Dog extends Animal {
-
-        void sound() {
-            System.out.println("Dog barks");
-        }
-    }
-
-    class Main {
-
-        public static void main(String[] args) {
-
-            Animal a = new Dog();
-
-            a.sound();
-        }
-    }
-
 [⬆ Back to Topics](#topics)
 
 ---
 
-# 11. Abstraction
+## Abstraction
 
 ### Structure
 
@@ -521,7 +455,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 12. Interface
+## Interface
 
 ### Structure
 
@@ -562,7 +496,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 13. Encapsulation
+## Encapsulation
 
 ### Structure
 
@@ -607,51 +541,43 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 14. Access Modifiers
+## Access Modifiers
 
-## Private
-
-### Structure
+### Private Structure
 
     private dataType variableName;
 
-### Example
+### Private Example
 
     class Student {
         private int age = 20;
     }
 
-## Public
-
-### Structure
+### Public Structure
 
     public dataType variableName;
 
-### Example
+### Public Example
 
     class Student {
         public String name = "Rahim";
     }
 
-## Default
-
-### Structure
+### Default Structure
 
     dataType variableName;
 
-### Example
+### Default Example
 
     class Student {
         int age = 20;
     }
 
-## Protected
-
-### Structure
+### Protected Structure
 
     protected dataType variableName;
 
-### Example
+### Protected Example
 
     class Parent {
 
@@ -669,11 +595,9 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 15. Exception Handling
+## Exception Handling
 
-## try-catch
-
-### Structure
+### try-catch Structure
 
     try {
         // risky code
@@ -691,9 +615,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         System.out.println("Cannot divide by zero");
     }
 
-## finally
-
-### Structure
+### finally Structure
 
     try {
         // code
@@ -717,9 +639,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         System.out.println("Done");
     }
 
-## throw
-
-### Structure
+### throw Structure
 
     throw new ExceptionType("message");
 
@@ -731,9 +651,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         throw new ArithmeticException("Not eligible");
     }
 
-## throws
-
-### Structure
+### throws Structure
 
     returnType methodName() throws ExceptionType {
         // code
@@ -754,11 +672,9 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 16. Package
+## Package
 
-## Import Package
-
-### Structure
+### Import Package Structure
 
     import packageName.ClassName;
 
@@ -778,9 +694,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         }
     }
 
-## Create Package
-
-### Structure
+### Create Package Structure
 
     package packageName;
 
@@ -799,11 +713,9 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 17. Static
+## Static
 
-## Static Variable
-
-### Structure
+### Static Variable Structure
 
     static dataType variableName;
 
@@ -814,9 +726,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         static String university = "University";
     }
 
-## Static Method
-
-### Structure
+### Static Method Structure
 
     static returnType methodName() {
         // statements
@@ -835,9 +745,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         }
     }
 
-## Static Block
-
-### Structure
+### Static Block Structure
 
     static {
         // statements
@@ -860,7 +768,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 18. Inner Class
+## Inner Class
 
 ### Structure
 
@@ -898,7 +806,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 19. ArrayList
+## ArrayList
 
 ### Structure
 
@@ -926,18 +834,12 @@ Object-Oriented Programming (OOP) in Java language with examples
         }
     }
 
-## ArrayList Methods
-
-### Structure
+### ArrayList Methods Structure
 
     listName.add(value);
-
     listName.get(index);
-
     listName.set(index, value);
-
     listName.remove(index);
-
     listName.size();
 
 ### Example
@@ -959,7 +861,7 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 20. File Handling
+## File Handling
 
 ### Structure
 
@@ -995,11 +897,9 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 21. GUI
+## GUI
 
-## JFrame
-
-### Structure
+### JFrame Structure
 
     import javax.swing.*;
 
@@ -1029,9 +929,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         }
     }
 
-## JButton
-
-### Structure
+### JButton Structure
 
     JButton button = new JButton("Button");
 
@@ -1061,11 +959,9 @@ Object-Oriented Programming (OOP) in Java language with examples
 
 ---
 
-# 22. Thread
+## Thread
 
-## Extending Thread
-
-### Structure
+### Extending Thread Structure
 
     class ClassName extends Thread {
 
@@ -1090,9 +986,7 @@ Object-Oriented Programming (OOP) in Java language with examples
         }
     }
 
-## Runnable
-
-### Structure
+### Runnable Structure
 
     class ClassName implements Runnable {
 
